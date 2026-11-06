@@ -1,0 +1,9 @@
+name: h100
+on: {push: {branches: [main]}, workflow_dispatch: {}}
+permissions: {contents: read}
+jobs:
+  h100:
+    runs-on: [self-hosted, h100-light]
+    timeout-minutes: 5
+    steps:
+      - run: echo "this should never run"
